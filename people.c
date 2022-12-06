@@ -11,7 +11,7 @@ int nextCodePerson()
     
     pcodes = fopen("codesPeople.chv", "rb+"); //aqui da pra botar chv 
     // abrindo o arquivo, "nome do arquivo", "modo de abertura"
-    // modo de abertura "rb+" abre um arquivo binário para leitura e escrita e, caso o arquivo ainda não exista, o mesmo é criado
+    // modo de abertura "rb+" abre um arquivo binário para leitura e escrita
     // recebe a stream do arquivo
     
     if(pcodes == NULL)    // se pcodes ainda for NULL, será escrito informações no arquivo
