@@ -57,6 +57,7 @@ int readInfosPet()
 
     printf("Nome do pet: ");
     fflush(stdin);              // limpa
+    __fpurge(stdin);
     fgets(petName, 255, stdin); // variável, tamanho, stdin
 
     printf("Espécie do pet: ");
@@ -181,6 +182,7 @@ int readNewInfosPet()
 
     printf("Nome do pet: ");
     fflush(stdin);              // limpa
+    __fpurge(stdin);
     fgets(petName, 255, stdin); // variável, tamanho, stdin
 
     printf("Data de nascimento (dd/mm/aaaa): ");
