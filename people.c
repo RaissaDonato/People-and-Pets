@@ -503,6 +503,7 @@ void sortAlphabeticallyPeople(char *file_path)
     peopleInfos = fopen(file_path,"rb");
     pcodes = fopen("codesPeople.chv","rb");
 
+    fseek(pcodes, sizeof(int), SEEK_SET);
     fread(&codPerson,sizeof(int),1,pcodes);
 
     int auxCod = codPerson;
