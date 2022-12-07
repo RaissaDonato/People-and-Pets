@@ -38,8 +38,6 @@ char readNewInfosPerson();
 
 void changeInfosPersonFile(char *file_path, char *name, char *rg, char *cpf, char *address, char *birth, char *wage, int codePerson);
 
-void changeInfosPerson();
-
 void deletePerson(char *file_path, int codPerson);
 
 void listCodePerson(char *file_path, int codPerson);
