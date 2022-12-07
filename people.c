@@ -291,9 +291,50 @@ char readNewInfosPerson()
     printf("Salário (R$XXXX,XX): ");
     fflush(stdin);
     fgets(wage, 20, stdin);
-
-    changeInfosPerson(name,rg,cpf,address,birth,wage,codPerson);
-
+    
+    if(strlen(name) > 1  && strlen(rg) > 1 && strlen(cpf) > 1 && strlen(address) > 1 && strlen(birth) > 1 && strlen(wage) > 1)
+    {
+        if(!cpfExists("people.bin", cpf))
+        {
+            if(!rgExists("people.bin", rg))
+            {
+                changeInfosPersonFile("people.bin", name, rg, cpf, address, birth, wage, codPerson);
+                printf("############################################################################\n");
+                printf("#                                                                          #\n");
+                printf("#                    Cadastro alterado com sucesso.                        #\n");
+                printf("#                                                                          #\n");
+                printf("############################################################################\n");
+            }
+            else
+            {
+                printf("############################################################################\n");
+                printf("#                                                                          #\n");
+                printf("#                  O RG digitado já existe no sistema!                     #\n");
+                printf("#                                                                          #\n");
+                printf("############################################################################\n");
+                return 0;
+            }
+        }
+        else
+        {
+            printf("############################################################################\n");
+            printf("#                                                                          #\n");
+            printf("#                  O CPF digitado já existe no sistema!                    #\n");
+            printf("#                                                                          #\n");
+            printf("############################################################################\n");
+            return 0;
+        }
+    }
+    else
+    {
+        printf("############################################################################\n");
+        printf("#                                                                          #\n");
+        printf("#         Dados Inválidos! Não foi possivel alterar o cadastro.           #\n");
+        printf("#                                                                          #\n");
+        printf("############################################################################\n");
+        return 0;
+    }
+}
 }
 
 void changeInfosPersonFile(char *file_path, char *name, char *rg, char *cpf, char *address, char *birth, char *wage, int codePerson)
@@ -334,63 +375,6 @@ void changeInfosPersonFile(char *file_path, char *name, char *rg, char *cpf, cha
     fclose(peopleInfos);
     
     free(newInfos);
-}
-
-void changeInfosPerson(char *name,char *rg,char *cpf,char *address,char *birth,char *wage,int codPerson)
-{
-
-    int existsCpf = cpfExists("people.bin",cpf);
-
-    int existsRg = rgExists("people.bin",rg);
-
-    if(strlen(name) > 1 && strlen(rg) > 1 && strlen(cpf) > 1 && strlen(address) > 1 && strlen(birth) > 1 && strlen(wage) > 1)
-    {
-        if(existsCpf==0) 
-        {
-            if(existsRg==0)
-            {
-                changeInfosPersonFile("people.bin", name, rg, cpf, address, birth, wage, codPerson);
-
-                system("cls"); // Limpa a tela do usuário.
-
-                printf("############################################################################\n");
-                printf("#                                                                          #\n");
-                printf("#                     Cadastro alterado com sucesso.                       #\n");
-                printf("#                                                                          #\n");
-                printf("############################################################################\n");
-            }
-            else
-            {
-                system("cls"); // Limpa a tela do usuário.
-
-                printf("############################################################################\n");
-                printf("#                                                                          #\n");
-                printf("#                  O RG digitado já existe no sistema!                     #\n");
-                printf("#                                                                          #\n");
-                printf("############################################################################\n");
-            }
-        }
-        else
-        {
-            system("cls"); // Limpa a tela do usuário.
-
-            printf("############################################################################\n");
-            printf("#                                                                          #\n");
-            printf("#                 O CPF digitado já existe no sistema.                     #\n");
-            printf("#                                                                          #\n");
-            printf("############################################################################\n");
-        }
-    }
-    else
-    {
-        system("cls"); // Limpa a tela do usuário.
-
-        printf("############################################################################\n");
-        printf("#                                                                          #\n");
-        printf("#         Dados inválidos! Não foi possível cadastrar no sistema.          #\n");
-        printf("#                                                                          #\n");
-        printf("############################################################################\n");
-    }
 }
 
 void listPeople(char *file_path)
