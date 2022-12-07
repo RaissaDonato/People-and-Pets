@@ -156,7 +156,7 @@ int readInfosPerson()
     fflush(stdin);
     fgets(wage, 20, stdin);
 
-    if(strlen(name) > 1  && strlen(rg) > 1 && strlen(cpf) > 1 && strlen(address) > 1 && strlen(birth) > 1 && strlen(wage) > 1)
+    if(strlen(name) > 1  && strlen(rg) > 12 && strlen(cpf) > 12 && strlen(address) > 1 && strlen(birth) > 11 && strlen(wage) > 7)
     {
         if(!cpfExists("people.bin", cpf))
         {
@@ -292,7 +292,7 @@ char readNewInfosPerson()
     fflush(stdin);
     fgets(wage, 20, stdin);
     
-    if(strlen(name) > 1  && strlen(rg) > 1 && strlen(cpf) > 1 && strlen(address) > 1 && strlen(birth) > 1 && strlen(wage) > 1)
+    if(strlen(name) > 1  && strlen(rg) > 12 && strlen(cpf) > 12 && strlen(address) > 1 && strlen(birth) > 11 && strlen(wage) > 7)
     {
         if(!cpfExists("people.bin", cpf))
         {
