@@ -153,7 +153,6 @@ int readInfosPerson()
     printf("Salário (R$XXXX,XX): ");
     fflush(stdin);
     fgets(wage, 20, stdin);
-    printf("%d",cpfExists("people.bin",cpf));
 
     if(strlen(name) > 1  && strlen(rg) > 1 && strlen(cpf) > 1 && strlen(address) > 1 && strlen(birth) > 1 && strlen(wage) > 1)
     {
