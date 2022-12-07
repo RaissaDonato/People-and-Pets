@@ -333,7 +333,7 @@ char readNewInfosPerson()
         return 0;
     }
 }
-}
+
 
 void changeInfosPersonFile(char *file_path, char *name, char *rg, char *cpf, char *address, char *birth, char *wage, int codePerson)
 {
