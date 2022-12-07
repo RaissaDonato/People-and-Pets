@@ -133,6 +133,7 @@ int readInfosPerson()
 
     printf("Nome: ");
     fflush(stdin);  
+    __fpurge(stdin);
     fgets(name, 255, stdin);    // variável, tamaanho, stdin
 
     printf("RG: ");
@@ -268,6 +269,7 @@ char readNewInfosPerson()
 
     printf("Nome: "); 
     fflush(stdin);    // limpa
+    __fpurge(stdin);
     fgets(name, 255, stdin);    // variável, tamanho, stdin
 
     printf("RG: ");
