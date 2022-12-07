@@ -352,21 +352,21 @@ void showbyCodePet(char *file_path, int codPet)
     fseek(people, sizeof(info_person) * codPet, SEEK_SET);
     fread(&listPeople, sizeof(info_person), 1,people);
 
-    if (listPets.fileExistsPet==1 && listPeople.fileExists==1) {
+    if (listPets.fileExistsPet==1 && listPeople.fileExists==1) 
+    {
         printf("\n#-----------------------------------------#");
-        printf("\n| > Codigo: %d                           |", listPets.codePet);
+        printf("\n Código: %d                               #", listPets.codePet);
         printf("\n#-----------------------------------------#");
-        printf("\n > Nome do pet: %s", listPets.namePet);
+        printf("\n Nome do pet: %s", listPets.namePet);
         printf(" > Data de nascimento do pet: %s", listPets.birthPet);
         printf(" > Tipo do pet: %s", listPets.speciesPet);
-        printf(" > Codigo do dono: %d\n", listPets.codePetOwner);
+        printf(" > Código do dono: %d\n", listPets.codePetOwner);
     }
-    else{
+    else
+    {
         printf("\n#-----------------------------------------#");
         printf("\n|       CADASTRO  NAO ENCONTRADO          |");
         printf("\n#-----------------------------------------#");
-
-
     }
 }
 
@@ -392,12 +392,12 @@ int listPetsCodeOwner(char *file_path, int codPetOwner)
         if (listPets.codePetOwner == codPetOwner && listPets.fileExistsPet==1) 
         {
             printf("\n#-----------------------------------------#");
-            printf("\n| > Codigo: %d                           |", listPets.codePet);
+            printf("\n# Código: %d                              #", listPets.codePet);
             printf("\n#-----------------------------------------#");
-            printf("\n > Nome do pet: %s", listPets.namePet);
-            printf(" > Data de nascimento do pet: %s", listPets.birthPet);
-            printf(" > Tipo do pet: %s", listPets.speciesPet);
-            printf(" > Codigo do usuario: %.3d", listPets.codePetOwner);
+            printf("\n Nome do pet: %s", listPets.namePet);
+            printf(" Data de nascimento do pet: %s", listPets.birthPet);
+            printf(" Tipo do pet: %s", listPets.speciesPet);
+            printf(" Código do usuario: %.3d", listPets.codePetOwner);
             countPets++;
         }
     }
