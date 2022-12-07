@@ -290,7 +290,7 @@ char readNewInfosPerson()
     fflush(stdin);
     fgets(wage, 20, stdin);
     
-    if(strlen(name) > 1  && strlen(rg) == 10 && strlen(cpf) == 10 && strlen(address) > 1 && strlen(birth) >= 8 && strlen(wage) > 1)
+    if(strlen(name) > 1  && strlen(rg) > 1 && strlen(cpf) > 1 && strlen(address) > 1 && strlen(birth) > 1 && strlen(wage) > 1)
     {
         if(!cpfExists("people.bin", cpf))
         {
