@@ -425,13 +425,13 @@ void listCodePerson(char *file_path, int codPerson)
     if(listPerson.fileExists == 1) 
     {
         printf("############################################################################\n");
-        printf("#  *Código: %d\n", listPerson.codePerson);
-        printf("#  *Nome: %s\n", listPerson.namePerson);
-        printf("#  *RG: %s\n", listPerson.rgPerson);
-        printf("#  *CPF: %s\n", listPerson.cpfPerson);
-        printf("#  *Endereço: %s\n", listPerson.addressPerson);
-        printf("#  *Data de nascimento: %s\n", listPerson.birthPerson);
-        printf("#  *Rendimento: %s\n", listPerson.wagePerson);
+        printf("#  Código: %d\n", listPerson.codePerson);
+        printf("#  Nome: %s\n", listPerson.namePerson);
+        printf("#  RG: %s\n", listPerson.rgPerson);
+        printf("#  CPF: %s\n", listPerson.cpfPerson);
+        printf("#  Endereço: %s\n", listPerson.addressPerson);
+        printf("#  Data de nascimento: %s\n", listPerson.birthPerson);
+        printf("#  Rendimento: %s\n", listPerson.wagePerson);
         printf("############################################################################\n");
     }
     else
@@ -475,13 +475,13 @@ void listOwnerTypePet(char *file_path, char *Type)
             printf("############################################################################\n");
             printf("\tCadastro das pessoas que possuem como pet o tipo %s:\n", listPets.speciesPet);
             printf("############################################################################\n");
-            printf("#  *Código: %d\n", listPeople.codePerson);
-            printf("#  *Nome: %s\n", listPeople.namePerson);
-            printf("#  *RG: %s\n", listPeople.rgPerson);
-            printf("#  *CPF: %s\n", listPeople.cpfPerson);
-            printf("#  *Endereço: %s\n", listPeople.addressPerson);
-            printf("#  *Data de nascimento: %s\n", listPeople.birthPerson);
-            printf("#  *Rendimento: %s\n", listPeople.wagePerson);
+            printf("#  Código: %d\n", listPeople.codePerson);
+            printf("#  Nome: %s\n", listPeople.namePerson);
+            printf("#  RG: %s\n", listPeople.rgPerson);
+            printf("#  CPF: %s\n", listPeople.cpfPerson);
+            printf("#  Endereço: %s\n", listPeople.addressPerson);
+            printf("#  Data de nascimento: %s\n", listPeople.birthPerson);
+            printf("#  Rendimento: %s\n", listPeople.wagePerson);
             printf("############################################################################\n");
         }
     }
@@ -532,12 +532,12 @@ void sortAlphabeticallyPeople(char *file_path)
         {
             printf("############################################################################\n");
             printf("Lista de pessoas ordenadas alfabeticamente:\n");
-            printf("#  *Código: %d\n", allPersons[i].codePerson);
-            printf("#  *Nome: %s", allPersons[i].namePerson);
-            printf("#  *Cpf: %s", allPersons[i].cpfPerson);
-            printf("#  *Endereco: %s", allPersons[i].addressPerson);
-            printf("#  *Data de nascimento: %s", allPersons[i].birthPerson);
-            printf("#  *Salário: %s", allPersons[i].wagePerson);
+            printf("#  Código: %d\n", allPersons[i].codePerson);
+            printf("#  Nome: %s", allPersons[i].namePerson);
+            printf("#  Cpf: %s", allPersons[i].cpfPerson);
+            printf("#  Endereco: %s", allPersons[i].addressPerson);
+            printf("#  Data de nascimento: %s", allPersons[i].birthPerson);
+            printf("#  Salário: %s", allPersons[i].wagePerson);
             printf("############################################################################\n");
             
         }
