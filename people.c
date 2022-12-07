@@ -17,6 +17,7 @@ int nextCodePerson()
     if(pcodes == NULL)    // se pcodes ainda for NULL, será escrito informações no arquivo
     {
         pcodes = fopen("codesPeople.chv", "wb+");    // w de writte
+        // a extensão de arquivo CHV tem zero tipo(s) primário de arquivo e pode ser aberta com Binary Data
     }
     
     fseek(pcodes, 0, SEEK_SET);
