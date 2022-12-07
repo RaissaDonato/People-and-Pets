@@ -565,9 +565,4 @@ void deletePerson(char *file_path, int codPerson)
     fseek(peopleInfos, sizeof(info_person) * codPerson, SEEK_SET);
     fwrite(&infos, sizeof(info_person), 1, peopleInfos);
 
-    fseek(peopleInfos, sizeof(info_person) * codPerson, SEEK_SET);
-    fread(&infos, sizeof(info_person), 1, peopleInfos);
-    printf("%s",infos.namePerson);
-    printf("%d",infos.fileExists);
-
 }
